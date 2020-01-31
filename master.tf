@@ -1,3 +1,8 @@
-#This is my first tf file
+resource "aws_vpc" "main2" {
+  cidr_block       = "10.0.0.0/16"
+  instance_tenancy = "dedicated"
 
-#second commit
+  tags = {
+    Name = "main"
+  }
+}
